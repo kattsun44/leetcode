@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"strings"
 )
 
@@ -35,10 +34,4 @@ func convert(s string, numRows int) string {
 
 	// flatten を連結した文字列を返却
 	return strings.Join(flatten, "")
-}
-
-func main() {
-	fmt.Println(convert("PAYPALISHIRING", 3))
-	fmt.Println(convert("PAYPALISHIRING", 4))
-	fmt.Println(convert("A", 1))
 }
