@@ -2,10 +2,11 @@
 # @param {Integer} k
 # @return {Boolean}
 def contains_nearby_duplicate(nums, k)
-  ans = false
+  h = {}
   nums.each_with_index do |n, i|
-    ans = nums[i+1...i+k].include?(n)
+    return true if h[n] != nil && (h[n] - i).abs <= k
+    h[n] = i
   end
 
-  ans
+  false
 end
